@@ -3,19 +3,14 @@
 <html lang="ru">
   <x-head.head />
 
-  <body>
+  <body id="body" data-spy="scroll" data-target=".header">
 
     <x-header.header />
 
-    <main role="main">
-        <div class="container">
 
 
           @yield('content')
-
-      </div>
-    </main>
-
+    
     <x-footer.footer />
 
   </body>

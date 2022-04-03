@@ -18,3 +18,5 @@ use App\Http\Controllers\TaskController;
 Route::get('/', [MainController::class, 'homepage'])->name('homepage');
 
 Route::resource('/tasks', TaskController::class);
+Route::get('/russian_cv', [\App\Http\Controllers\DownloadController::class, 'russianCV'])->name('russian_cv');
+Route::get('/english_cv', [\App\Http\Controllers\DownloadController::class, 'englishCV'])->name('english_cv');
