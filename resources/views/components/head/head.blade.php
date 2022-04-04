@@ -4,7 +4,7 @@
 <meta name="author" content="">
 <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
 
-<title>@yield('headTtitle')</title>
+<title>@yield('headTitle')</title>
 <meta name="description" content="@yield('headDescription')">
 <x-head.css />
 <x-head.js />
