@@ -3,6 +3,7 @@
 ## О проекте
 
 Сайт портфолио на PHP 8 + Laravel 9 + MySQL
+https://dsoloview.ru/
 
 ## Установка проекта
 
