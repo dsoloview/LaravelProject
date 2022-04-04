@@ -1,5 +1,8 @@
 @extends('layouts.app')
 
+@section('headTitle', 'To Do Laravel project dsoloview')
+@section('headDescription', 'Дмитрий Соловьев - PHP/Laravel разработчик. Работаю с PHP, Laravel, HTML, CSS, Sass, JS, MySQL, GIT, Linux. Мой telegram - dsoloview')
+
 @section('content')
     <div class="px-4">
         <h1 class="display-5 fw-bold">To Do лист</h1>
