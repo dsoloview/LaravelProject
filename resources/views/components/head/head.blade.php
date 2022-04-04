@@ -8,6 +8,8 @@
 <meta name="description" content="@yield('headDescription')">
 <x-head.css />
 <x-head.js />
+<x-head.analytics />
+
 
 <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/album/">
 
