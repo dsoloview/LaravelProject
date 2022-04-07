@@ -27,10 +27,4 @@ class AdminController extends Controller
     {
         return view('admin.admin');
     }
-
-    public function projects()
-    {
-        $projects = Project::get();
-        return view('admin.projects.projects', compact('projects'));
-    }
 }
