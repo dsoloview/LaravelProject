@@ -1,5 +1,5 @@
 <!--========== FOOTER ==========-->
-    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 mt-4 border-top bg-light">
+    <footer class="footer d-flex flex-wrap justify-content-between align-items-center py-3 mt-4 border-top bg-light">
         <div class="container">
         <p class="col-md-4 mb-0 text-muted">© 2022 dsoloview</p>
 
