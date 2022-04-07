@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('headTitle', 'Портфолио dsoloview на Laravel')
+@section('headDescription', 'Дмитрий Соловьев - PHP/Laravel разработчик. Работаю с PHP, Laravel, HTML, CSS, Sass, JS, MySQL, GIT, Linux. Мой telegram - dsoloview')
 
 @section('content')
     <!--========== SLIDER ==========-->
