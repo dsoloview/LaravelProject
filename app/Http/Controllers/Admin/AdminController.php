@@ -1,8 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
-use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use App\Models\Project;
+use function view;
 
 class AdminController extends Controller
 {
@@ -24,5 +26,11 @@ class AdminController extends Controller
     public function index()
     {
         return view('admin.admin');
+    }
+
+    public function projects()
+    {
+        $projects = Project::get();
+        return view('admin.projects.projects', compact('projects'));
     }
 }

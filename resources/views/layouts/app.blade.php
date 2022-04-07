@@ -7,7 +7,10 @@
     @if(Auth::check())
         <x-header.admin/>
     @endif
-    <x-header.header />
+    @if(!request()->is('admin/*') && !request()->routeIs('admin'))
+        <x-header.header />
+    @endif
+
 
 
 
