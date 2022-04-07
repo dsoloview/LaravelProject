@@ -20,3 +20,13 @@ Route::get('/', [MainController::class, 'homepage'])->name('homepage');
 Route::resource('/tasks', TaskController::class);
 Route::get('/russian_cv', [\App\Http\Controllers\DownloadController::class, 'russianCV'])->name('russian_cv');
 Route::get('/english_cv', [\App\Http\Controllers\DownloadController::class, 'englishCV'])->name('english_cv');
+
+//Auth::routes();
+
+// Authentication Routes...
+Route::get('/login', [\App\Http\Controllers\Auth\LoginController::class, 'showLoginForm'])->name('login');
+Route::post('/login', [\App\Http\Controllers\Auth\LoginController::class, 'login']);
+Route::post('/logout', [\App\Http\Controllers\Auth\LoginController::class, 'logout'])->name('logout');
+Route::post('/logout', [\App\Http\Controllers\Auth\LoginController::class, 'logout'])->name('logout');
+
+Route::get('/admin', [App\Http\Controllers\AdminController::class, 'index'])->name('admin');

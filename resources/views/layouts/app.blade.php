@@ -4,7 +4,9 @@
   <x-head.head />
 
   <body id="body" class="bg-white">
-
+    @if(Auth::check())
+        <x-header.admin/>
+    @endif
     <x-header.header />
 
 
