@@ -29,9 +29,6 @@ Route::post('/logout', [\App\Http\Controllers\Auth\LoginController::class, 'logo
 
 Route::prefix('admin')->group(function () {
     Route::get('/', [\App\Http\Controllers\Admin\AdminController::class, 'index'])->name('admin');
-    Route::resource('/projects', \App\Http\Controllers\Admin\ProjectsController::class);
-    Route::get('/projects', [\App\Http\Controllers\Admin\AdminController::class, 'projects'])->name('projects');
-
-
+    Route::resource('projects', \App\Http\Controllers\Admin\ProjectsController::class);
 });
 

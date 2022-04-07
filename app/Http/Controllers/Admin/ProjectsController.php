@@ -11,7 +11,8 @@ class ProjectsController extends Controller
 {
     public function index()
     {
-
+        $projects = Project::get();
+        return view('admin.projects.projects', compact('projects'));
     }
     /**
      * Show the form for creating a new resource.
