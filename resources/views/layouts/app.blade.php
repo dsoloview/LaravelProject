@@ -3,14 +3,14 @@
 <html lang="ru">
   <x-head.head />
 
-  <body id="body" data-spy="scroll" data-target=".header">
+  <body id="body" class="bg-white">
 
     <x-header.header />
 
 
 
           @yield('content')
-    
+
     <x-footer.footer />
 
   </body>

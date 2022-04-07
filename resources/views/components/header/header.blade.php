@@ -1,37 +1,12 @@
 <header class="header navbar-fixed-top">
-    <!-- Navbar -->
-    <nav class="navbar" role="navigation">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="menu-container js_nav-item">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="toggle-icon"></span>
-                </button>
+    <div class="container">
+        <header class="d-flex flex-wrap justify-content-center py-3">
+            <a href="{{route('homepage')}}" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+                <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+                <span class="fs-4">DSOLOVIEW</span>
+            </a>
 
-                <!-- Logo -->
-                <div class="logo">
-                    <a class="logo-wrap" href="/">
-                        DSOLOVIEW
-                    </a>
-                </div>
-                <!-- End Logo -->
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse nav-collapse">
-                <div class="menu-container">
-                    <ul class="nav navbar-nav navbar-nav-right">
-                        <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#body">Главная</a></li>
-                        <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#about">Обо мне</a></li>
-{{--                        <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#experience">Опыт</a></li>--}}
-                        <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#work">Портфолио</a></li>
-                        <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#contact">Контакты</a></li>
-                    </ul>
-                </div>
-            </div>
-            <!-- End Navbar Collapse -->
-        </div>
-    </nav>
-    <!-- Navbar -->
+            <x-header.navbar />
+        </header>
+    </div>
 </header>

@@ -3,160 +3,110 @@
 
 @section('content')
     <!--========== SLIDER ==========-->
-    <div class="promo-block">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-6 sm-margin-b-60">
-                    <div class="margin-b-30">
-                        <h1 class="promo-block-title">Дмитрий <br/> Соловьев</h1>
-                        <p class="promo-block-text">PHP разработчик</p>
-                    </div>
-                    <ul class="list-inline">
-                        <li><a href="https://www.linkedin.com/in/dsoloview" class="social-icons" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a></li>
-                        <li><a href="https://vk.com/dsoloview" class="social-icons" target="_blank"><i class="fa-brands fa-vk"></i></a></li>
-                        <li><a href="https://github.com/dsoloview" class="social-icons" target="_blank"><i class="fa-brands fa-github"></i></a></li>
-                        <li><a href="https://t.me/dsoloview" class="social-icons" target="_blank"><i class="fa-brands fa-telegram"></i></a></li>
-                    </ul>
+    <section class="main bg-light">
+        <div class="container col-xxl-8 px-4 py-5">
+            <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+                <div class="col-10 col-sm-8 col-lg-6">
+                    <img src="img/mockup/logo.jpeg" class="d-block mx-lg-auto img-fluid rounded-circle w-50" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
                 </div>
-                <div class="col-sm-6">
-                    <div class="promo-block-img-wrap">
-                        <img class="promo-block-img img-responsive" src="img/mockup/logo.jpeg" align="Avatar">
+                <div class="col-lg-6">
+                    <h1 class="display-1 fw-bold lh-1 mb-3 ">Дмитрий <br> Соловьев</h1>
+                    <p class="lead">PHP разработчик</p>
+                    <div class="list-group list-group-horizontal">
+                            <div class="mx-2 p-2 rounded-circle social-icon"><a href="https://www.linkedin.com/in/dsoloview" style="color:#515769;" target="_blank"><i class="fa-brands fa-linkedin-in fa-xl"></i></a></div>
+                            <div class="mx-2 p-2 rounded-circle social-icon"><a href="https://vk.com/dsoloview" style="color:#515769;" target="_blank"><i class="fa-brands fa-vk fa-xl"></i></a></div>
+                            <div class="mx-2 p-2 rounded-circle social-icon"><a href="https://github.com/dsoloview" style="color:#515769;" target="_blank"><i class="fa-brands fa-github fa-xl"></i></a></div>
+                            <div class="mx-2 p-2 rounded-circle social-icon"><a href="https://t.me/dsoloview" style="color:#515769;" target="_blank"><i class="fa-brands fa-telegram fa-xl"></i></a></div>
                     </div>
                 </div>
             </div>
-            <!--// end row -->
         </div>
-    </div>
+    </section>
 
-    <!--========== PAGE LAYOUT ==========-->
-    <!-- About -->
-    <div id="about">
-        <div class="container content-lg">
-            <div class="row">
-                <div class="col-sm-5 sm-margin-b-60">
-                    <img class="full-width img-responsive" src="img/about/laravel.png" alt="Image">
-                </div>
-                <div class="col-sm-7">
-                    <div class="section-seperator margin-b-50">
-                        <div class="margin-b-50">
-                            <div class="margin-b-30">
-                                <h2>Обо мне</h2>
-                                <p>Меня зовут Дмитрий Соловьев, я Junior PHP разработчик. Занимаюсь разработкой backend части сайтов на PHP 8 + Laravel 9 + MySQL.</p>
-                                <p>Также я работаю с HTML, CSS, Sass и JS</p>
+
+    <section class="about">
+        <div class="container col-xxl-8 px-4 py-5">
+            <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+                <div class="col-lg-6">
+                    <div class="about_title">
+                        <h2 class="display-5 fw-bold lh-1 mb-3">Обо мне</h2>
+                        <p>Меня зовут Дмитрий Соловьев, я Junior PHP разработчик. Занимаюсь разработкой backend части сайтов на PHP 8 + Laravel 9 + MySQL.</p>
+                        <p>Также я работаю с HTML, CSS, Sass и JS</p>
+                    </div>
+                    <div class="cv pb-3 border-bottom">
+                        <a href="{{route('russian_cv')}}" class="btn btn-outline-secondary btn-lg">Russian CV</a>
+                        <a href="{{route('english_cv')}}" class="btn btn-outline-secondary btn-lg">English CV</a>
+                    </div>
+                    <div class="about_technologies mt-3">
+                        <h2 class="fw-bold mb-3">Технологии</h2>
+                        <div class="d-flex flex-wrap justify-content-around">
+                            <div class="m-3 text-center">
+                                <i class="fa-brands fa-php fa-4x"></i>
+                                <h4 style="margin-top: 0.25em;">PHP</h4>
                             </div>
-                            <a href="{{route('russian_cv')}}" class="btn-theme btn-theme-md btn-default-bg text-uppercase">Russian CV</a>
-                            <a href="{{route('english_cv')}}" class="btn-theme btn-theme-md btn-default-bg text-uppercase">English CV</a>
+                            <div class="m-3 text-center">
+                                <i class="fa-brands fa-laravel fa-4x"></i>
+                                <h4 style="margin-top: 0.25em;">Laravel</h4>
+                            </div>
+                            <div class="m-3 text-center">
+                                <i class="fa-brands fa-git-alt fa-4x"></i>
+                                <h4 style="margin-top: 0.25em;">Git</h4>
+                            </div>
+                            <div class="m-3 text-center">
+                                <i class="fa-brands fa-linux fa-4x"></i>
+                                <h4 style="margin-top: 0.25em;">Linux</h4>
+                            </div>
+                            <div class="m-3 text-center">
+                                <i class="fa-brands fa-css3-alt fa-4x"></i>
+                                <h4 style="margin-top: 0.25em;">CSS</h4>
+                            </div>
+                            <div class="m-3 text-center">
+                                <i class="fa-brands fa-html5 fa-4x"></i>
+                                <h4 style="margin-top: 0.25em;">HTML</h4>
+                            </div>
+                            <div class="m-3 text-center">
+                                <i class="fa-brands fa-sass fa-4x"></i>
+                                <h4 style="margin-top: 0.25em;">Sass</h4>
+                            </div>
+                            <div class="m-3 text-center">
+                                <i class="fa-solid fa-database fa-4x"></i>
+                                <h4 style="margin-top: 0.25em;">MySQL</h4>
+                            </div>
+                            <div class="m-3 text-center">
+                                <i class="fa-brands fa-bootstrap fa-4x"></i>
+                                <h4 style="margin-top: 0.25em;">Bootstrap</h4>
+                            </div>
+                            <div class="m-3 text-center">
+                                <i class="fa-brands fa-js fa-4x"></i>
+                                <h4 style="margin-top: 0.25em;">JavaScript</h4>
+                            </div>
                         </div>
-                    </div>
-
-                    <h2>Технологии</h2>
-                    <!-- Progress Box -->
-                    <div style="display: flex; justify-content: space-between; flex-wrap: wrap">
-                    <div style="text-align: center; margin-right: 40px">
-                        <i class="fa-brands fa-php fa-4x"></i>
-                        <h4 style="margin-top: 0.25em;">PHP</h4>
-                    </div>
-                        <div style="text-align: center; margin-right: 40px">
-                        <i class="fa-brands fa-laravel fa-4x"></i>
-                        <h4 style="margin-top: 0.25em;">Laravel</h4>
-                    </div>
-                        <div style="text-align: center; margin-right: 40px">
-                            <i class="fa-brands fa-git-alt fa-4x"></i>
-                            <h4 style="margin-top: 0.25em;">Git</h4>
-                        </div>
-                        <div style="text-align: center; margin-right: 40px">
-                            <i class="fa-brands fa-linux fa-4x"></i>
-                            <h4 style="margin-top: 0.25em;">Linux</h4>
-                        </div>
-                        <div style="text-align: center; margin-right: 40px">
-                            <i class="fa-brands fa-css3-alt fa-4x"></i>
-                            <h4 style="margin-top: 0.25em;">CSS</h4>
-                        </div>
-                        <div style="text-align: center; margin-right: 40px">
-                            <i class="fa-brands fa-html5 fa-4x"></i>
-                            <h4 style="margin-top: 0.25em;">HTML</h4>
-                        </div>
-                        <div style="text-align: center; margin-right: 40px">
-                            <i class="fa-brands fa-sass fa-4x"></i>
-                            <h4 style="margin-top: 0.25em;">Sass</h4>
-                        </div>
-                        <div style="text-align: center; margin-right: 40px">
-                            <i class="fa-solid fa-database fa-4x"></i>
-                            <h4 style="margin-top: 0.25em;">MySQL</h4>
-                        </div>
-                        <div style="text-align: center; margin-right: 40px">
-                            <i class="fa-brands fa-bootstrap fa-4x"></i>
-                            <h4 style="margin-top: 0.25em;">Bootstrap</h4>
-                        </div>
-                        <div style="text-align: center; margin-right: 40px">
-                            <i class="fa-brands fa-js fa-4x"></i>
-                            <h4 style="margin-top: 0.25em;">JavaScript</h4>
-                        </div>
-                    </div>
-                    <!-- End Progress Box -->
-                </div>
-            </div>
-            <!--// end row -->
-        </div>
-    </div>
-    <!-- End About -->
-
-    <!-- Work -->
-    <div id="work">
-        <div class="container content-lg">
-            <div class="row margin-b-40">
-                <div class="col-sm-6">
-                    <h2>Проекты</h2>
-                    <p>Сейчас я активно наполняю свой профиль GitHub и разрабатываю собственные проекты на laravel</p>
-                </div>
-            </div>
-            <!--// end row -->
-
-            <div class="row">
-                @if(!empty($projects))
-               @foreach($projects as $project)
-                   <x-homepage.project :project="$project" />
-               @endforeach
-                    @endif
-            </div>
-            <!--// end row -->
-        </div>
-    </div>
-    <!-- End Work -->
-
-    <!-- Contact -->
-    <div id="contact">
-        <div class="bg-color-sky-light">
-            <div class="container content-lg">
-                <div class="row margin-b-40">
-                    <div class="col-sm-6">
-                        <h2>Контакты</h2>
                     </div>
                 </div>
-                <!--// end row -->
 
-                <div class="row">
-                    <div class="col-md-3 col-xs-6 md-margin-b-30">
-                        <h4>Город</h4>
-                        Москва
-                    </div>
-                    <div class="col-md-3 col-xs-6 md-margin-b-30">
-                        <h4>Телефон</h4>
-                        <a href="tel:+79997853256">+7 999 785 32 56</a>
-                    </div>
-                    <div class="col-md-3 col-xs-6">
-                        <h4>Email</h4>
-                        <a href="mailto:dsoloview44@gmail.com">dsoloview44@gmail.com</a>
-                    </div>
-                    <div class="col-md-3 col-xs-6">
-                        <h4>Сайт</h4>
-                        <a href="https://dsoloview.ru/">dsoloview.ru</a>
-                    </div>
+                <div class="col-10 col-sm-8 col-lg-6">
+                    <img src="img/about/laravel.png" class="d-block mx-lg-auto img-fluid w-75" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
                 </div>
-                <!--// end row -->
+
             </div>
         </div>
-    </div>
-    <!-- End Contact -->
-    <!--========== END PAGE LAYOUT ==========-->
+    </section>
+
+   <section class="projects">
+       <div class="album py-5">
+           <div class="container">
+               <h2 class="pb-2">Проекты</h2>
+               <p class=" border-bottom pb-2">Сейчас я активно наполняю свой профиль GitHub и разрабатываю собственные проекты на laravel</p>
+               <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                   @if(!empty($projects))
+                       @foreach($projects as $project)
+                           <x-homepage.project :project="$project" />
+                       @endforeach
+                   @endif
+               </div>
+           </div>
+       </div>
+   </section>
+
+
 @endsection
