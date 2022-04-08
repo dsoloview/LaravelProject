@@ -17,5 +17,10 @@
                 </form>
             </ul>
         </div>
+        @if(request()->is('admin/*') || request()->routeIs('admin'))
+            <div>
+                <a href="{{route('homepage')}}" class="btn bg-primary text-white">На сайт</a>
+            </div>
+        @endif
     </div>
 </nav>

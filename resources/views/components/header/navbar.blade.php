@@ -6,11 +6,12 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link {{Route::is('homepage') ? 'active' : ''}}" aria-current="page" href="{{route('homepage')}}">Главная</a>
+                    <a class="nav-link {{Route::is('homepage') ? 'active' : 'text-secondary'}}" aria-current="page" href="{{route('homepage')}}">Главная</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{Route::is('tasks.index') ? 'active' : ''}}" aria-current="page" href="{{route('tasks.index')}}">Задачи</a>
+                    <a class="nav-link {{Route::is('tasks.index') ? 'active' : 'text-secondary'}}" aria-current="page" href="{{route('tasks.index')}}">Задачи</a>
                 </li>
+            </ul>
         </div>
     </div>
 </nav>
