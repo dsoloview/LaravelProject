@@ -24,11 +24,11 @@ class ProjectsRequest extends FormRequest
     public function rules()
     {
         return [
-            'title' => 'required',
-            'description' => 'required',
-            'tag' => 'required',
-            'link' => 'required',
-            'image' => 'required|image',
+            'title' => 'required|min:5|max:100',
+            'description' => 'required|min:5|max:255',
+            'tag' => 'required|max:50',
+            'link' => 'required|max:100',
+            'image' => ($this->isMethod('post')) ? 'required|image|max:2048' : 'image|max:2048',
         ];
     }
 }

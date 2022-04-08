@@ -12,8 +12,6 @@
     @endif
 
 
-
-
           @yield('content')
 
     <x-footer.footer />

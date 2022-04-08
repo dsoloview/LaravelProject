@@ -12,7 +12,7 @@ class ProjectsController extends Controller
     public function index()
     {
         $projects = Project::get();
-        return view('admin.projects.projects', compact('projects'));
+        return view('admin.projects.index', compact('projects'));
     }
     /**
      * Show the form for creating a new resource.
@@ -32,16 +32,12 @@ class ProjectsController extends Controller
      */
     public function store(ProjectsRequest $request)
     {
-        $path = $request->image->store('images/projects', ['disk' => 'public']);
-        Project::create([
-            'title' => $request->title,
-            'description' => $request->description,
-            'image_path' => $path,
-            'link' => $request->link,
-            'tag' => $request->tag,
-        ]);
+        $fields = $request->validated();
+        $fields['image_path'] = $request->image->store('images/projects', ['disk' => 'public']);
 
-        return redirect(route('projects'));
+        Project::create($fields);
+
+        return redirect(route('projects.index'));
     }
 
     /**
@@ -52,17 +48,18 @@ class ProjectsController extends Controller
      */
     public function show(Project $project)
     {
+        return view('admin.projects.show', compact('project'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
      */
-    public function edit($id)
+    public function edit(Project $project)
     {
-        //
+        return view('admin.projects.edit', compact('project'));
     }
 
     /**
@@ -70,21 +67,31 @@ class ProjectsController extends Controller
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
      */
-    public function update(Request $request, $id)
+    public function update(ProjectsRequest $request, Project $project)
     {
-        //
+        $fields = $request->validated();
+        if (!empty($request->image)) {
+            $fields['image_path'] = $request->image->store('images/projects', ['disk' => 'public']);
+        }
+
+
+        $project->update($fields);
+
+        return redirect(route('projects.index'));
     }
 
     /**
      * Remove the specified resource from storage.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
      */
-    public function destroy($id)
+    public function destroy(Project $project)
     {
-        //
+        $project->delete();
+
+        return redirect(route('projects.index'));
     }
 }
