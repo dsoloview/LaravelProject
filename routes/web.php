@@ -3,6 +3,7 @@
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\TaskController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Auth\Middleware\Authenticate;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,7 +28,7 @@ Route::get('/login', [\App\Http\Controllers\Auth\LoginController::class, 'showLo
 Route::post('/login', [\App\Http\Controllers\Auth\LoginController::class, 'login']);
 Route::post('/logout', [\App\Http\Controllers\Auth\LoginController::class, 'logout'])->name('logout');
 
-Route::prefix('admin')->group(function () {
+Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function () {
     Route::get('/', [\App\Http\Controllers\Admin\AdminController::class, 'index'])->name('admin');
     Route::resource('projects', \App\Http\Controllers\Admin\ProjectsController::class);
 });
