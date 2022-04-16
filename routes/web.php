@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\TaskController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Auth\Middleware\Authenticate;
 
@@ -22,7 +23,7 @@ Route::resource('/tasks', TaskController::class);
 Route::get('/russian_cv', [\App\Http\Controllers\DownloadController::class, 'russianCV'])->name('russian_cv');
 Route::get('/english_cv', [\App\Http\Controllers\DownloadController::class, 'englishCV'])->name('english_cv');
 
-
+//Auth::routes();
 // Authentication Routes...
 Route::get('/login', [\App\Http\Controllers\Auth\LoginController::class, 'showLoginForm'])->name('login');
 Route::post('/login', [\App\Http\Controllers\Auth\LoginController::class, 'login']);

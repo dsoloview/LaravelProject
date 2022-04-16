@@ -2,18 +2,29 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Contracts\ProjectsRepositoryContract;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\ProjectsRequest;
 use App\Models\Project;
 use Illuminate\Http\Request;
+use PhpParser\Node\Expr\Print_;
 
 class ProjectsController extends Controller
 {
+
+    private ProjectsRepositoryContract $projectsRepository;
+
+    public function __construct(ProjectsRepositoryContract $projectsRepository)
+    {
+        $this->projectsRepository = $projectsRepository;
+    }
+
     public function index()
     {
-        $projects = Project::get();
+        $projects = $this->projectsRepository->index();
         return view('admin.projects.index', compact('projects'));
     }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -27,7 +38,7 @@ class ProjectsController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
      */
     public function store(ProjectsRequest $request)
@@ -35,7 +46,7 @@ class ProjectsController extends Controller
         $fields = $request->validated();
         $fields['image_path'] = $request->image->store('images/projects', ['disk' => 'public']);
 
-        Project::create($fields);
+        $this->projectsRepository->create($fields);
 
         return redirect(route('projects.index'));
     }
@@ -43,7 +54,7 @@ class ProjectsController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
      */
     public function show(Project $project)
@@ -54,7 +65,7 @@ class ProjectsController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
      */
     public function edit(Project $project)
@@ -65,8 +76,8 @@ class ProjectsController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param \Illuminate\Http\Request $request
+     * @param int $id
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
      */
     public function update(ProjectsRequest $request, Project $project)
@@ -76,8 +87,7 @@ class ProjectsController extends Controller
             $fields['image_path'] = $request->image->store('images/projects', ['disk' => 'public']);
         }
 
-
-        $project->update($fields);
+        $this->projectsRepository->update($project, $fields);
 
         return redirect(route('projects.index'));
     }
@@ -85,12 +95,12 @@ class ProjectsController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
      */
     public function destroy(Project $project)
     {
-        $project->delete();
+        $this->projectsRepository->delete($project);
 
         return redirect(route('projects.index'));
     }
