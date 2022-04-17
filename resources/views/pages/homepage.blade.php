@@ -93,7 +93,46 @@
             </div>
         </div>
     </section>
+    <section class="experience">
+        <div class="container">
+            <h2 class="pb-2 border-bottom">Опыт работы</h2>
+            <div class="items m-lg-auto">
+                <div class="d-flex w-50 mx-auto mb-3 shadow-sm p-3" >
+                    <div class="rounded m-lg-3">
+                        <a href="https://cpeople.ru/" target="_blank"><img class="rounded-circle" src="/storage/images/experience/QSOFT.jpg" alt="" style="width: 50px; height: auto"></a>
+                    </div>
+                    <div class="content">
+                        <div class="fs-4">Стажер PHP/Laravel разработчик</div>
+                        <div class="fs-5"><a href="https://cpeople.ru/" class="text-decoration-none text-reset" target="_blank">QSOFT</a></div>
+                        <div class="mb-2">Февраль 2022 - Апрель 2022, Москва</div>
+                        <div>Разработка backend части онлайн магазина. PHP 8, Laravel 9, MySQL, Git, CSS, HTML, Sass, REST, Linux, Bash</div>
+                    </div>
+                </div>
+                    <div class="d-flex w-50 mx-auto mb-3 shadow-sm p-3">
+                        <div class="rounded m-lg-3">
+                            <a href="https://cpeople.ru/" target="_blank"><img class="rounded-circle" src="/storage/images/experience/CP.jpg" alt="" style="width: 50px; height: auto"></a>
+                        </div>
+                        <div class="content">
+                            <div class="fs-4">Project Manager</div>
+                            <div class="fs-5"><a href="https://cpeople.ru/" class="text-decoration-none text-reset" target="_blank">CreativePeople</a></div>
+                            <div class="mb-2">Ноябрь 2021 - Апрель 2022, Москва</div>
+                            <div>Ведение нескольких крупных IT проектов. Управление командами разработки, тестирования и дизайна. Работа с сайтами на 1C-Битрикс и Laravel.</div>
+                        </div>
+                    </div>
+                <div class="d-flex w-50 mx-auto mb-3 shadow-sm p-3" >
+                        <div class="rounded m-lg-3">
+                            <a href="https://aisol.ru/" target="_blank"><img class="rounded-circle" src="/storage/images/experience/IT.jpg" alt="" style="width: 50px; height: auto"></a>
+                        </div>
+                        <div class="content">
+                            <div class="fs-4">Ведущий интернет-маркетолог</div>
+                            <div class="fs-5"><a href="https://aisol.ru/" class="text-decoration-none text-reset" target="_blank">АйТи Решения</a></div>
+                            <div class="mb-2">Сентябрь 2020 - Ноябрь 2021, Кострома</div>
+                            <div>SEO оптимизация крупных сайтов. Управление командами SMM и таргетированной рекламы. Работа с Frontend часть сайтов. Подбор специалистов в команду. Оптимизация рабочих процессов.</div>
+                        </div>
+                    </div>
+            </div>
 
+    </section>
    <section class="projects">
        <div class="album py-5">
            <div class="container">
