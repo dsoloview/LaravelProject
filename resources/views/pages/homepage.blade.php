@@ -97,7 +97,7 @@
         <div class="container">
             <h2 class="pb-2 border-bottom">Опыт работы</h2>
             <div class="items m-lg-auto">
-                <div class="d-flex w-50 mx-auto mb-3 shadow-sm p-3" >
+                <div class="experience_item d-flex mx-auto mb-3 shadow-sm p-3">
                     <div class="rounded m-lg-3">
                         <a href="https://cpeople.ru/" target="_blank"><img class="rounded-circle" src="/storage/images/experience/QSOFT.jpg" alt="" style="width: 50px; height: auto"></a>
                     </div>
@@ -108,7 +108,7 @@
                         <div>Разработка backend части онлайн магазина. PHP 8, Laravel 9, MySQL, Git, CSS, HTML, Sass, REST, Linux, Bash</div>
                     </div>
                 </div>
-                    <div class="d-flex w-50 mx-auto mb-3 shadow-sm p-3">
+                    <div class="experience_item d-flex mx-auto mb-3 shadow-sm p-3">
                         <div class="rounded m-lg-3">
                             <a href="https://cpeople.ru/" target="_blank"><img class="rounded-circle" src="/storage/images/experience/CP.jpg" alt="" style="width: 50px; height: auto"></a>
                         </div>
@@ -119,7 +119,7 @@
                             <div>Ведение нескольких крупных IT проектов. Управление командами разработки, тестирования и дизайна. Работа с сайтами на 1C-Битрикс и Laravel.</div>
                         </div>
                     </div>
-                <div class="d-flex w-50 mx-auto mb-3 shadow-sm p-3" >
+                <div class="experience_item d-flex mx-auto mb-3 shadow-sm p-3" >
                         <div class="rounded m-lg-3">
                             <a href="https://aisol.ru/" target="_blank"><img class="rounded-circle" src="/storage/images/experience/IT.jpg" alt="" style="width: 50px; height: auto"></a>
                         </div>
