@@ -9,16 +9,25 @@
         <div class="container col-xxl-8 px-4 py-5">
             <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
                 <div class="col-10 col-sm-8 col-lg-6">
-                    <img src="img/mockup/logo.jpeg" class="d-block mx-lg-auto img-fluid rounded-circle w-50" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+                    <img src="img/mockup/logo.jpeg" class="d-block mx-lg-auto img-fluid rounded-circle w-50"
+                         alt="Bootstrap Themes" width="700" height="500" loading="lazy">
                 </div>
                 <div class="col-lg-6">
                     <h1 class="display-1 fw-bold lh-1 mb-3 ">Дмитрий <br> Соловьев</h1>
                     <p class="lead">PHP разработчик</p>
                     <div class="list-group list-group-horizontal">
-                            <div class="mx-2 p-2 rounded-circle social-icon"><a href="https://www.linkedin.com/in/dsoloview" style="color:#515769;" target="_blank"><i class="fa-brands fa-linkedin-in fa-xl"></i></a></div>
-                            <div class="mx-2 p-2 rounded-circle social-icon"><a href="https://vk.com/dsoloview" style="color:#515769;" target="_blank"><i class="fa-brands fa-vk fa-xl"></i></a></div>
-                            <div class="mx-2 p-2 rounded-circle social-icon"><a href="https://github.com/dsoloview" style="color:#515769;" target="_blank"><i class="fa-brands fa-github fa-xl"></i></a></div>
-                            <div class="mx-2 p-2 rounded-circle social-icon"><a href="https://t.me/dsoloview" style="color:#515769;" target="_blank"><i class="fa-brands fa-telegram fa-xl"></i></a></div>
+                        <div class="mx-2 p-2 rounded-circle social-icon"><a href="https://www.linkedin.com/in/dsoloview"
+                                                                            style="color:#515769;" target="_blank"><i
+                                    class="fa-brands fa-linkedin-in fa-xl"></i></a></div>
+                        <div class="mx-2 p-2 rounded-circle social-icon"><a href="https://vk.com/dsoloview"
+                                                                            style="color:#515769;" target="_blank"><i
+                                    class="fa-brands fa-vk fa-xl"></i></a></div>
+                        <div class="mx-2 p-2 rounded-circle social-icon"><a href="https://github.com/dsoloview"
+                                                                            style="color:#515769;" target="_blank"><i
+                                    class="fa-brands fa-github fa-xl"></i></a></div>
+                        <div class="mx-2 p-2 rounded-circle social-icon"><a href="https://t.me/dsoloview"
+                                                                            style="color:#515769;" target="_blank"><i
+                                    class="fa-brands fa-telegram fa-xl"></i></a></div>
                     </div>
                 </div>
             </div>
@@ -32,7 +41,8 @@
                 <div class="col-lg-6">
                     <div class="about_title">
                         <h2 class="display-5 fw-bold lh-1 mb-3">Обо мне</h2>
-                        <p>Меня зовут Дмитрий Соловьев, я Junior PHP разработчик. Занимаюсь разработкой backend части сайтов на PHP 8 + Laravel 9 + MySQL.</p>
+                        <p>Меня зовут Дмитрий Соловьев, я Junior PHP разработчик. Занимаюсь разработкой backend части
+                            сайтов на PHP 8 + Laravel 9 + MySQL.</p>
                         <p>Также я работаю с HTML, CSS, Sass и JS</p>
                     </div>
                     <div class="cv pb-3 border-bottom">
@@ -87,7 +97,8 @@
                 </div>
 
                 <div class="col-10 col-sm-8 col-lg-6">
-                    <img src="img/about/laravel.png" class="d-block mx-lg-auto img-fluid w-75" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+                    <img src="img/about/laravel.png" class="d-block mx-lg-auto img-fluid w-75" alt="Bootstrap Themes"
+                         width="700" height="500" loading="lazy">
                 </div>
 
             </div>
@@ -97,57 +108,27 @@
         <div class="container">
             <h2 class="pb-2 border-bottom">Опыт работы</h2>
             <div class="items m-lg-auto">
-                <div class="experience_item d-flex mx-auto mb-3 shadow-sm p-3">
-                    <div class="rounded m-lg-3">
-                        <a href="https://cpeople.ru/" target="_blank"><img class="rounded-circle" src="/storage/images/experience/QSOFT.jpg" alt="" style="width: 50px; height: auto"></a>
-                    </div>
-                    <div class="content">
-                        <div class="fs-4">Стажер PHP/Laravel разработчик</div>
-                        <div class="fs-5"><a href="https://cpeople.ru/" class="text-decoration-none text-reset" target="_blank">QSOFT</a></div>
-                        <div class="mb-2">Февраль 2022 - Апрель 2022, Москва</div>
-                        <div>Разработка backend части онлайн магазина. PHP 8, Laravel 9, MySQL, Git, CSS, HTML, Sass, REST, Linux, Bash</div>
-                    </div>
-                </div>
-                    <div class="experience_item d-flex mx-auto mb-3 shadow-sm p-3">
-                        <div class="rounded m-lg-3">
-                            <a href="https://cpeople.ru/" target="_blank"><img class="rounded-circle" src="/storage/images/experience/CP.jpg" alt="" style="width: 50px; height: auto"></a>
-                        </div>
-                        <div class="content">
-                            <div class="fs-4">Project Manager</div>
-                            <div class="fs-5"><a href="https://cpeople.ru/" class="text-decoration-none text-reset" target="_blank">CreativePeople</a></div>
-                            <div class="mb-2">Ноябрь 2021 - Апрель 2022, Москва</div>
-                            <div>Ведение нескольких крупных IT проектов. Управление командами разработки, тестирования и дизайна. Работа с сайтами на 1C-Битрикс и Laravel.</div>
-                        </div>
-                    </div>
-                <div class="experience_item d-flex mx-auto mb-3 shadow-sm p-3" >
-                        <div class="rounded m-lg-3">
-                            <a href="https://aisol.ru/" target="_blank"><img class="rounded-circle" src="/storage/images/experience/IT.jpg" alt="" style="width: 50px; height: auto"></a>
-                        </div>
-                        <div class="content">
-                            <div class="fs-4">Ведущий интернет-маркетолог</div>
-                            <div class="fs-5"><a href="https://aisol.ru/" class="text-decoration-none text-reset" target="_blank">АйТи Решения</a></div>
-                            <div class="mb-2">Сентябрь 2020 - Ноябрь 2021, Кострома</div>
-                            <div>SEO оптимизация крупных сайтов. Управление командами SMM и таргетированной рекламы. Работа с Frontend часть сайтов. Подбор специалистов в команду. Оптимизация рабочих процессов.</div>
-                        </div>
-                    </div>
+                @foreach($experience as $experienceItem)
+                    <x-homepage.experience :experience="$experienceItem"/>
+                @endforeach
             </div>
 
     </section>
-   <section class="projects">
-       <div class="album py-5">
-           <div class="container">
-               <h2 class="pb-2">Проекты</h2>
-               <p class=" border-bottom pb-2">Сейчас я активно наполняю свой профиль GitHub и разрабатываю собственные проекты на laravel</p>
-               <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-                   @if(!empty($projects))
-                       @foreach($projects as $project)
-                           <x-homepage.project :project="$project" />
-                       @endforeach
-                   @endif
-               </div>
-           </div>
-       </div>
-   </section>
-
+    <section class="projects">
+        <div class="album py-5">
+            <div class="container">
+                <h2 class="pb-2">Проекты</h2>
+                <p class=" border-bottom pb-2">Сейчас я активно наполняю свой профиль GitHub и разрабатываю собственные
+                    проекты на laravel</p>
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                    @if(!empty($projects))
+                        @foreach($projects as $project)
+                            <x-homepage.project :project="$project"/>
+                        @endforeach
+                    @endif
+                </div>
+            </div>
+        </div>
+    </section>
 
 @endsection

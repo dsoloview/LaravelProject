@@ -2,32 +2,32 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Contracts\ExperienceRepositoryContract;
 use App\Contracts\ImagesRepositoryContract;
 use App\Contracts\ProjectsRepositoryContract;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\ExperienceRequest;
 use App\Http\Requests\ProjectsRequest;
+use App\Models\Experience;
 use App\Models\Project;
-use Illuminate\Http\Request;
-use PhpParser\Node\Expr\Print_;
 
-class ProjectsController extends Controller
+class ExperienceController extends Controller
 {
-
-    private ProjectsRepositoryContract $projectsRepository;
+    private ExperienceRepositoryContract $experienceRepository;
     private ImagesRepositoryContract $imagesRepository;
     private string $imagePath;
 
-    public function __construct(ProjectsRepositoryContract $projectsRepository, ImagesRepositoryContract $imagesRepository)
+    public function __construct(ExperienceRepositoryContract $experienceRepository, ImagesRepositoryContract $imagesRepository)
     {
-        $this->projectsRepository = $projectsRepository;
+        $this->experienceRepository = $experienceRepository;
         $this->imagesRepository = $imagesRepository;
-        $this->imagePath = 'images/projects';
+        $this->imagePath = 'images/experience';
     }
 
     public function index()
     {
-        $projects = $this->projectsRepository->index();
-        return view('admin.projects.index', compact('projects'));
+        $experience = $this->experienceRepository->index();
+        return view('admin.experience.index', compact('experience'));
     }
 
     /**
@@ -37,7 +37,7 @@ class ProjectsController extends Controller
      */
     public function create()
     {
-        return view('admin.projects.create');
+        return view('admin.experience.create');
     }
 
     /**
@@ -46,15 +46,15 @@ class ProjectsController extends Controller
      * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
      */
-    public function store(ProjectsRequest $request)
+    public function store(ExperienceRequest $request)
     {
         $fields = $request->validated();
 
-        $project = $this->projectsRepository->create($fields);
+        $project = $this->experienceRepository->create($fields);
 
         $this->imagesRepository->create($request, $project, $this->imagePath);
 
-        return redirect(route('projects.index'));
+        return redirect(route('experience.index'));
     }
 
     /**
@@ -63,9 +63,9 @@ class ProjectsController extends Controller
      * @param int $id
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
      */
-    public function show(Project $project)
+    public function show(Experience $experience)
     {
-        return view('admin.projects.show', compact('project'));
+        return view('admin.experience.show', compact('experience'));
     }
 
     /**
@@ -74,9 +74,9 @@ class ProjectsController extends Controller
      * @param int $id
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
      */
-    public function edit(Project $project)
+    public function edit(Experience $experience)
     {
-        return view('admin.projects.edit', compact('project'));
+        return view('admin.experience.edit', compact('experience'));
     }
 
     /**
@@ -86,17 +86,17 @@ class ProjectsController extends Controller
      * @param int $id
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
      */
-    public function update(ProjectsRequest $request, Project $project)
+    public function update(ExperienceRequest $request, Experience $experience)
     {
         $fields = $request->validated();
 
         if (!empty($request->image)) {
-            $this->imagesRepository->update($request, $project, $this->imagePath);
+            $this->imagesRepository->create($request, $experience, $this->imagePath);
         }
 
-        $this->projectsRepository->update($project, $fields);
+        $this->experienceRepository->update($experience, $fields);
 
-        return redirect(route('projects.index'));
+        return redirect(route('experience.index'));
     }
 
     /**
@@ -105,10 +105,10 @@ class ProjectsController extends Controller
      * @param int $id
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
      */
-    public function destroy(Project $project)
+    public function destroy(Experience $experience)
     {
-        $this->projectsRepository->delete($project);
+        $this->experienceRepository->delete($experience);
 
-        return redirect(route('projects.index'));
+        return redirect(route('experience.index'));
     }
 }

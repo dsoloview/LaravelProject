@@ -9,7 +9,7 @@ abstract class BaseRepository implements \App\Contracts\BaseRepositoryContract
 {
     public function index(): Collection
     {
-        return $this->model->get();
+        return $this->model->all();
     }
 
     public function create(array $fields): Model

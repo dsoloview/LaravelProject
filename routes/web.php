@@ -32,5 +32,6 @@ Route::post('/logout', [\App\Http\Controllers\Auth\LoginController::class, 'logo
 Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function () {
     Route::get('/', [\App\Http\Controllers\Admin\AdminController::class, 'index'])->name('admin');
     Route::resource('projects', \App\Http\Controllers\Admin\ProjectsController::class);
+    Route::resource('experience', \App\Http\Controllers\Admin\ExperienceController::class);
 });
 

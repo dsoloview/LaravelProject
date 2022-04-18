@@ -2,18 +2,19 @@
 
 namespace App\Models;
 
+use DateTimeInterface;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Carbon\Carbon;
 
-class Project extends Model
+class Experience extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['title', 'description', 'link', 'tag'];
+    protected $guarded = ['id'];
 
     public function image(): \Illuminate\Database\Eloquent\Relations\MorphMany
     {
         return $this->morphMany(Image::class, 'imagable');
     }
-
 }
