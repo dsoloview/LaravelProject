@@ -3,7 +3,7 @@
     <div class="shadow-sm card h-100">
         <a href="{{$project->link}}" target="_blank"><img class="project_image thumbnail d-block mx-lg-auto img-fluid"
                                                           src="{{Illuminate\Support\Facades\Storage::url($project->image->first()->path)}}"
-                                                          alt="Latest Products Image"></a>
+                                                          alt="Latest Products Image" style="margin: 0 auto"></a>
         <div class="card-body d-flex flex-column justify-content-end">
             <h4><a href="{{$project->link}}" class="text-decoration-none text-body"
                    target="_blank">{{$project->title}}</a></h4>

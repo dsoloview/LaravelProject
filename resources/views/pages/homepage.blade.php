@@ -7,15 +7,16 @@
     <!--========== SLIDER ==========-->
     <section class="main bg-light">
         <div class="container col-xxl-8 px-4 py-5">
-            <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+            <div
+                class="row flex-lg-row-reverse align-items-center g-5 py-5 justify-content-center">
                 <div class="col-10 col-sm-8 col-lg-6">
-                    <img src="img/mockup/logo.jpeg" class="d-block mx-lg-auto img-fluid rounded-circle w-50"
-                         alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+                    <img src="img/mockup/logo.jpeg" class="d-block img-fluid rounded-circle w-50"
+                         alt="Bootstrap Themes" width="700" height="500" loading="lazy" style="margin: 0 auto;">
                 </div>
                 <div class="col-lg-6">
-                    <h1 class="display-1 fw-bold lh-1 mb-3 ">Дмитрий <br> Соловьев</h1>
-                    <p class="lead">PHP разработчик</p>
-                    <div class="list-group list-group-horizontal">
+                    <h1 class="display-1 fw-bold lh-1 mb-3 text-center">Дмитрий <br> Соловьев</h1>
+                    <p class="lead text-center">PHP разработчик</p>
+                    <div class="list-group list-group-horizontal justify-content-center">
                         <div class="mx-2 p-2 rounded-circle social-icon"><a href="https://www.linkedin.com/in/dsoloview"
                                                                             style="color:#515769;" target="_blank"><i
                                     class="fa-brands fa-linkedin-in fa-xl"></i></a></div>
@@ -37,7 +38,7 @@
 
     <section class="about">
         <div class="container col-xxl-8 px-4 py-5">
-            <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+            <div class="row flex-lg-row-reverse align-items-center justify-content-center g-5 py-5">
                 <div class="col-lg-6">
                     <div class="about_title">
                         <h2 class="display-5 fw-bold lh-1 mb-3">Обо мне</h2>
@@ -97,8 +98,9 @@
                 </div>
 
                 <div class="col-10 col-sm-8 col-lg-6">
-                    <img src="img/about/laravel.png" class="d-block mx-lg-auto img-fluid w-75" alt="Bootstrap Themes"
-                         width="700" height="500" loading="lazy">
+                    <img src="img/about/laravel.png" class="d-block img-fluid w-75 text-center"
+                         alt="Bootstrap Themes"
+                         width="700" height="500" loading="lazy" style="margin: 0 auto">
                 </div>
 
             </div>
